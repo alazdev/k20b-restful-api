@@ -12,9 +12,13 @@
 
 - Postman
 
-  Postman Collection link: <a href='https://www.getpostman.com/collections/563af6f4ac61c0e8d973'>klik disini 😁</a>
+  Postman Collection link: 
   
-  Untuk Vairables nya disesuaikan saja
+  ```
+  https://www.getpostman.com/collections/563af6f4ac61c0e8d973
+  ```
+  
+  Untuk **Vairables** nya disesuaikan saja
 
 ## Sumber
 
