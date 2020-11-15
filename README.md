@@ -12,9 +12,11 @@
 
 - Postman
 
+  Postman Collection link: <a href='https://www.getpostman.com/collections/563af6f4ac61c0e8d973'>klik disini 😁</a>
   
+  Untuk Vairables nya disesuaikan saja
 
 ## Sumber
 
-- https://medium.com/@gedetikapermana/laravel-7-membuat-restfull-api-7af605732e5a
-- https://laravel.com/docs/7.x
+- <a href='https://medium.com/@gedetikapermana/laravel-7-membuat-restfull-api-7af605732e5a'>LARAVEL 7 | Membuat RESTful API</a>
+- <a href='https://laravel.com/docs/7.x'>Laravel - The PHP Framework For Web Artisans</a>
