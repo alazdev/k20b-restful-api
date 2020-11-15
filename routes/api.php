@@ -39,14 +39,10 @@ Route::prefix('peminjaman')->group(function () {
     Route::get('/{id}', 'PeminjamanApiController@get_a_peminjaman');
 
     Route::post('/', 'PeminjamanApiController@post_a_peminjaman');
-    Route::put('/{id}', 'PeminjamanApiController@update_a_peminjaman');
-    Route::delete('/{id}', 'PeminjamanApiController@delete_a_peminjaman');
 });
 Route::prefix('pengembalian')->group(function () {
     Route::get('/', 'PengembalianApiController@get_pengembalians');
     Route::get('/{id}', 'PengembalianApiController@get_a_pengembalian');
 
-    Route::post('/', 'PengembalianApiController@post_a_pengembalian');
     Route::put('/{id}', 'PengembalianApiController@update_a_pengembalian');
-    Route::delete('/{id}', 'PengembalianApiController@delete_a_pengembalian');
 });

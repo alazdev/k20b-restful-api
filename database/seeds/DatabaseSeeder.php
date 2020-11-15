@@ -86,12 +86,5 @@ class DatabaseSeeder extends Seeder
                 'created_at' => Carbon::now(),
             ]
         );
-        DB::table('pengembalians')->insert([
-            [
-                'id' => 1,
-                'id_peminjaman' => 1,
-                'created_at' => Carbon::now(),
-            ]
-        ]);
     }
 }

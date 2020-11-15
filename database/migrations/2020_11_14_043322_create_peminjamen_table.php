@@ -17,7 +17,9 @@ class CreatePeminjamenTable extends Migration
             $table->id();
             $table->bigInteger('id_user');
             $table->bigInteger('id_book');
+            $table->bigInteger('total_denda')->nullable();
             $table->timestamps();
+            $table->dateTime('deleted_at')->nullable();
         });
     }
 

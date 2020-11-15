@@ -23,7 +23,7 @@ class BookApiController extends Controller
             ]
         );
         if($validatedData->fails()){
-            return response()->json($validatedData->errors(),200);
+            return response()->json($validatedData->errors(),400);
         } else {
             $id_now = Book::get()->where('id',$id);
             if($id_now->count() > 0){
@@ -31,7 +31,7 @@ class BookApiController extends Controller
                 return response()->json($data, 200);
             } else {
                 $error = ['error' => 'Cannot found data with id = '.$id];
-                return response()->json($error, 200);
+                return response()->json($error, 400);
             }
         }
     }
@@ -44,7 +44,7 @@ class BookApiController extends Controller
         ]);
 
         if($validatedData->fails()){
-            return response()->json($validatedData->errors(),200);
+            return response()->json($validatedData->errors(),400);
         }else{
             $book = new Book();
             $book->judul_buku = $req->judul_buku;
@@ -61,7 +61,7 @@ class BookApiController extends Controller
     public function update_a_book(Request $req, $id){
         $id_now = Book::find($id);
         if(!$id_now){
-            return response()->json(['error' => 'Cannot found data with id = '.$id], 200);
+            return response()->json(['error' => 'Cannot found data with id = '.$id], 400);
         }
 
         $validatedData = Validator::make(array_merge(
@@ -76,7 +76,7 @@ class BookApiController extends Controller
             ]
         );
         if($validatedData->fails()){
-            return response()->json($validatedData->errors(),200);
+            return response()->json($validatedData->errors(),400);
         }else{
             $book = $id_now;
             $book->judul_buku = $req->judul_buku;
@@ -86,14 +86,14 @@ class BookApiController extends Controller
                 return response()->json([
                     'message' => 'data updated successfully!',
                     'data' => $book
-                ], 201);
+                ], 200);
             }
         }
     }
     public function delete_a_book($id){
         $id_now = Book::find($id);
         if(!$id_now){
-            return response()->json(['error' => 'Cannot found data with id = '.$id], 200);
+            return response()->json(['error' => 'Cannot found data with id = '.$id], 400);
         }
 
         $validatedData = Validator::make(array_merge(
@@ -105,11 +105,11 @@ class BookApiController extends Controller
             ]
         );
         if($validatedData->fails()){
-            return response()->json($validatedData->errors(),200);
+            return response()->json($validatedData->errors(),400);
         }else{
-            $peminjaman = Peminjaman::firstWhere('id_book',$id);
+            $peminjaman = Peminjaman::where('deleted_at', null)->firstWhere('id_book',$id);
             if($peminjaman){
-                return response()->json(['error' => 'buku dengan id = '.$id.' tidak bisa dihapus karena sedang dipinjam'], 200);
+                return response()->json(['error' => 'buku dengan id = '.$id.' tidak bisa dihapus karena sedang dipinjam'], 400);
             }
             $book = $id_now;
             if($book->delete()){
