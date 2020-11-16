@@ -26,13 +26,13 @@
 
 Cara Import Postman Collection (pastikan sudah meng-copy link di atas):
 
-<video autoplay loop muted inline width="600" align="center"><source src='.\public\video\How to import Postman Collection.mp4'></video>
+<a href='.\public\video\How to import Postman Collection.mp4' target="_blank">Klik disini</a>
 
 
 
 Cara mengganti variables (untuk url bisa disesuaikan):
 
-<video autoplay loop muted inline width="600" align="center"><source src='.\public\video\How to change variables in Postman Collection.mp4'></video>
+<a href='.\public\video\How to change variables in Postman Collection.mp4' target="_blank">Klik disini</a>
 
 
 
@@ -73,6 +73,8 @@ dengan menggunakan method PUT dan Body x-www-form-form-urlencode untuk mengubah 
 
 
 <img src="./public/img/Hasil Akhir - 5.png" width="600" align="center" alt="GET book api">
+
+Gambar Hasil Akhir - 5:
 
 dengan menggunakan method DELETE untuk menghapus satu data book. Anda bisa mengganti **{{masukkan_id_disini}}** menjadi ID yang dituju berupa angka atau integer (seperti pada contoh menggunakan angka 4).
 
