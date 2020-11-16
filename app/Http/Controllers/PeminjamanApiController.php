@@ -71,4 +71,29 @@ class PeminjamanApiController extends Controller
             }
         }
     }
+    public function delete_a_peminjaman($id){
+        $id_now = Peminjaman::where('deleted_at', null)->find($id);
+        if(!$id_now){
+            return response()->json(['error' => 'Cannot found data with ID peminjaman = '.$id], 400);
+        }
+
+        $validatedData = Validator::make(array_merge(
+            [
+                'id' => $id
+            ]),
+            [
+                'id' => 'required|integer',
+            ]
+        );
+        if($validatedData->fails()){
+            return response()->json($validatedData->errors(),400);
+        }else{
+            $pengembalian = $id_now;
+            if($pengembalian->delete()){
+                return response()->json([
+                    'message' => 'data deleted successfully!',
+                ], 200);
+            }
+        }
+    }
 }
