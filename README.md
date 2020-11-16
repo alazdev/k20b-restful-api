@@ -26,13 +26,13 @@
 
 Cara Import Postman Collection (pastikan sudah meng-copy link di atas):
 
-<a href='.\public\video\How to import Postman Collection.mp4' target="_blank">Klik disini</a>
+<img src='.\public\img\How to import Postman Collection.gif'>
 
 
 
 Cara mengganti variables (untuk url bisa disesuaikan):
 
-<a href='.\public\video\How to change variables in Postman Collection.mp4' target="_blank">Klik disini</a>
+<img src='.\public\img\How to change variables in Postman Collection.gif'/>
 
 
 
